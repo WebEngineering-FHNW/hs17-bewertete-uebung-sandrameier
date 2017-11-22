@@ -2,9 +2,21 @@
 
 ## Commit Proposal
 
-Matriculation Number: <to be filled by student>
+Matriculation Number: 15-651-839
 
-Project idea short description: 
+Project idea short description:
+Ich habe vor einiger Zeit eine Liste mit Dingen erstellt, die ich im
+Laufe meines Lebens tun möchte - so als eine Art Lebensherausforderung
+(ich will ja nicht im Alltagstrott versinken). Leider ist das aber
+eben eine langweilige Liste und das möchte ich im Projekt ändern.
+Mein Ziel ist eine Webapplikation/Webseite mit folgenden Features:
+- Es können Zielkategorien erfasst werden
+- Es können eigene Ziele erfasst werden, mit Bild (optional), Beschrieb, Kategoriezuordnung (optional) und Deadline (optional)
+- Ziele können als erledigt markiert werden
+- Ziele und Kategorien können natürlich auch nach der Erfassung bearbeitet werden
+- Das Ganze soll einigermassen hübsch daherkommen
+- Zusatzfeature: Man kann andere Leute dazu einladen, bei gewissen Kategorien auch Ziele zu erfassen/bearbeiten, so im Sinn von "gemeinsame Ziele"
+
 
 
 ## Project confirmation
