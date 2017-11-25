@@ -21,7 +21,10 @@ Mein Ziel ist eine Webapplikation/Webseite mit folgenden Features:
 
 ## Project confirmation
 
-< to be filled by lecturer>
+Confirmed.
+
+Super! Das gefällt mir sehr. Ich nehme das auf unter der Bezeichnung "bucket list".
+Go for it.
 
 
 ## Project delivery <to be filled by student>
