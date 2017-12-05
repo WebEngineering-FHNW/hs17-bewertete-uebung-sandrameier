@@ -2,9 +2,17 @@ package mvc
 
 class GoalController {
 
-    // def index() { }
-
     static scaffold = Goal
+
+    // TODO: Change the name of this method to "index" as well as the views name & view reference
+    // TODO: This overwrites the existing list view of all goals
+    def home(Topic meinThema) {
+        List<Topic> t = Topic.list()
+        List<Goal> g = Goal.list()
+        List<Goal> gbyt = Goal.findAllByGoalTopic(meinThema)
+
+        render view:'home', model: [goals: g, topics: t, goalsByTopic: gbyt]
+    }
 
     def addGoal(Goal g) {
         // save(g)

@@ -13,22 +13,28 @@ class BootStrap {
         Topic bildung = save(new Topic(topicName: "Bildung"))
         Topic reisen = save(new Topic(topicName: "Reisen"))
 
-        Goal studium = save(new Goal(goalDescription: "Studium erfolgreich abschliessen",
+        Goal studium = save(new Goal(goalTitle: "Studium",
+                                     goalDescription: "Studium erfolgreich abschliessen",
+                                     //goalImage: null,
                                      goalDeadline: null,
                                      goalPriority: 2,
                                      goalReached: false,
                                      goalTopic: bildung,))
-        Goal hebraeisch = save(new Goal(goalDescription: "Hebräisch in seinen Grundlagen lernen",
+        Goal hebraeisch = save(new Goal(goalTitle: "Hebräisch",
+                                        goalDescription: "Hebräisch in seinen Grundlagen lernen",
                                         goalPriority: 3,
                                         goalTopic: bildung))
-        Goal bali = save(new Goal(goalDescription: "In Bali mit Schildkröten tauchen",
+        Goal bali = save(new Goal(goalTitle: "Bali",
+                                  goalDescription: "In Bali mit Schildkröten tauchen",
                                   goalPriority: 1,
                                   goalReached: true,
                                   goalTopic: reisen))
-        Goal china = save(new Goal(goalDescription: "Das chinesische Neujahr in China mit einer traditionellen Show erleben",
+        Goal china = save(new Goal(goalTitle: "China",
+                                   goalDescription: "Das chinesische Neujahr in China mit einer traditionellen Show erleben",
                                    goalPriority: 3,
                                    goalTopic: reisen))
-        Goal springen = save(new Goal(goalDescription: "Einmal vom 5 Meter-Turm springen",
+        Goal springen = save(new Goal(goalTitle: "5 Meter",
+                                      goalDescription: "Einmal vom 5 Meter-Turm springen",
                                       goalPriority: 3,
                                       goalTopic: defaultTopic))
 

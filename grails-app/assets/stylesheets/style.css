@@ -4,6 +4,31 @@ html, body {
     font-family: Petrona;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2, h3 {
+    margin: 0px;
+    padding: 0px;
+}
+
+h1 {
+    font-size: 5em;
+    color: #ffffff;
+}
+
+h2 {
+    margin: 0 0 0 3.5%;
+    clear: both;
+    font-size: 1.5em;
+}
+
+h3 {
+    font-family: Indie Flower;
+}
+
 header {
     background-color: #aaaaaa;
     width: 100%;
@@ -26,38 +51,22 @@ nav > ul {
 
 nav > ul > li {
     float: left;
-    padding: 0px 10px;
+    padding: 0 10px;
     list-style-type: none;
 }
 
 main {
-    background-color: #aaaaff;
-    width: 80%;
+    width: 70%;
     margin: 4% auto;
 }
 
 article {
     background-color: #ffaaaa;
-    width: 26%;
+    width: 29.3%;
     min-width: 200px;
-    min-height: 200px;
-    margin: 3.5%;
+    min-height: 100px;
+    margin: 1.5% 2% 3.5% 2%;
     float: left;
     font-family: Indie Flower;
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-h1 {
-    font-size: 5em;
-    color: #ffffff;
-    margin: 0px;
-    padding: 0px;
-}
-
-h2 {
-    font-family: Petrona;
-}
