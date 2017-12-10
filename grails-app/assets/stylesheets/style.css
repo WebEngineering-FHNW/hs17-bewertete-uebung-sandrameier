@@ -20,7 +20,7 @@ h1 {
 }
 
 h2 {
-    margin: 0 0 0 3.5%;
+    margin: 0 0 0 1.5%;
     clear: both;
     font-size: 1.5em;
 }
@@ -45,11 +45,15 @@ nav {
 }
 
 nav > ul {
+    width: 70%;
     margin: 0 auto;
-    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
-nav > ul > li {
+nav > ul > a {
     float: left;
     padding: 0 10px;
     list-style-type: none;
@@ -61,12 +65,42 @@ main {
 }
 
 article {
-    background-color: #ffaaaa;
-    width: 29.3%;
+    background-color: #fefefe;
+    width: 30.3%;
     min-width: 200px;
     min-height: 100px;
-    margin: 1.5% 2% 3.5% 2%;
+    margin: 1.5% 1.5% 3.5% 1.5%;
     float: left;
     font-family: Indie Flower;
+}
+
+.goalpicture {
+    background-image: url("../assets/goals/abandoned_stations.jpg");
+
+   /* background-color: #ffaaaa; */
+    background-size: 100%;
+    width: auto;
+    min-height: 200px;
+    padding: 10px 10px 0 10px;
+    text-align: center;
+}
+
+.goalpicture > h3 {
+    min-height: 200px;
+    border-top: 1px solid #eeeeee;
+    border-right: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    padding: 10px;
+}
+
+.goalproperties {
+    background-color: #fefefe;
+    width: auto;
+    min-height: 40px;
+    border-right: 1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
+    border-left: 1px solid #eeeeee;
+    margin: 0 10px 10px 10px;
+    padding: 10px;
 }
 

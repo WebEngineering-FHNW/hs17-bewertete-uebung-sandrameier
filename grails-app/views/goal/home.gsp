@@ -21,7 +21,7 @@
         <!-- TODO: jump to topic -->
         <ul>
             <g:each var="thema" in="${topics}">
-                <li>${thema}</li>
+                <a href="#${thema}"><li>${thema}</li></a>
             </g:each>
         </ul>
     </nav>
@@ -32,12 +32,19 @@
             <p>Title: ${it.title}</p>
         </g:findAll> --%>
         <g:each in="${topics}" var="thema">
-            <h2>${thema}</h2>
+            <h2 id="${thema}">${thema}</h2>
             <g:each in="${goals}" var="ziel">
                 <g:if test="${ziel.goalTopic == thema}">
                 <article>
-                    <h3>${ziel.goalTitle}</h3>
-                    ${ziel}
+                    <div class="goalpicture">
+                        <h3>${ziel}</h3>
+                    </div>
+                    <div class="goalproperties">
+                        ${ziel.goalDescription}
+                        ${ziel.goalDeadline}
+                        ${ziel.goalPriority}
+                        ${ziel.goalReached}
+                    </div>
                 </article>
                 </g:if>
             </g:each>

@@ -1,19 +1,17 @@
 package mvc
 
-import java.sql.Blob
-
 class Goal {
 
     String  goalTitle
     String  goalDescription
-    //Blob    goalImage
+    //Picture goalImage
     Date    goalDeadline
     int     goalPriority
     boolean goalReached
     Topic   goalTopic
 
     String toString() {
-        return goalDescription
+        return goalTitle
     }
 
     static constraints = {
