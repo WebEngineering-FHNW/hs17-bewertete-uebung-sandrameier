@@ -5,8 +5,12 @@
     <title>Bucket List</title>
     <asset:stylesheet src="style.css"/>
     <!-- TODO: nicht benötigte Schriften löschen -->
-    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Petrona">
-    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Indie+Flower">
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Bree+Serif"> <!-- Zwischentitel -->
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Raleway"> <!-- Fliesstext -->
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Nunito">
+
+
     <!-- TODO: facivon -->
     <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
 </head>
@@ -31,27 +35,26 @@
         <%-- <g:findAll in="${books}" expr="it.author == 'Stephen King'">
             <p>Title: ${it.title}</p>
         </g:findAll> --%>
-        <g:each in="${topics}" var="thema">
+        <g:each in="${topics}" var="thema" class="topic">
+            <div class="topic">
             <h2 id="${thema}">${thema}</h2>
             <g:each in="${goals}" var="ziel">
                 <g:if test="${ziel.goalTopic == thema}">
-                <article>
+                <article class="${ziel.goalReached}">
                     <div class="goalpicture">
-                        <h3>${ziel}</h3>
+                        <!-- <h3>${ziel}</h3> -->
                     </div>
+                    <div class="goaltriangle"></div>
                     <div class="goalproperties">
                         ${ziel.goalDescription}
                         ${ziel.goalDeadline}
                         ${ziel.goalPriority}
-                        ${ziel.goalReached}
                     </div>
                 </article>
                 </g:if>
             </g:each>
+            </div>
         </g:each>
-        <article>
-            <p>Bild, Beschreibung, Deadline, Prio, beendet</p>
-        </article>
     </main>
 
 </body>

@@ -1,7 +1,9 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-family: Petrona;
+    font-family: Raleway;
+    font-weight: lighter;
+    color: #000000;
 }
 
 img {
@@ -15,37 +17,38 @@ h1, h2, h3 {
 }
 
 h1 {
+    font-family: Nunito;
     font-size: 5em;
     color: #ffffff;
 }
 
 h2 {
-    margin: 0 0 0 1.5%;
+    height: 25px;
+    margin: 0 0 10px 1.5%;
     clear: both;
-    font-size: 1.5em;
-}
-
-h3 {
-    font-family: Indie Flower;
+    font-family: Bree Serif;
+    font-size: 1.8em;
 }
 
 header {
     background-color: #aaaaaa;
     width: 100%;
-    height: 25%;
+    height: 20%;
     min-height: 100px;
     text-align: center;
 }
 
 nav {
-    background-color: #aaffaa;
+    background-color: #333333;
     width: 100%;
     height: 6%;
     min-height: 20px;
+    font-family: Montserrat;
 }
 
 nav > ul {
     width: 70%;
+    height: 100%;
     margin: 0 auto;
     display: flex;
     flex-direction: row;
@@ -57,50 +60,78 @@ nav > ul > a {
     float: left;
     padding: 0 10px;
     list-style-type: none;
+    flex-basis: 160px;
+    text-align: center;
 }
 
 main {
-    width: 70%;
-    margin: 4% auto;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.topic {
+    min-height: 445px;
+    clear: both;
+    padding: 30px 20% 70px 20%;
+}
+
+.topic:nth-child(odd) {
+    background-color: #eeeeee;
+}
+
+.topic:nth-child(even) {
+    background-color: #dedede;
 }
 
 article {
-    background-color: #fefefe;
-    width: 30.3%;
+    width: 250px;
+    height: 300px;
+ /*   width: 30.3%;
     min-width: 200px;
-    min-height: 100px;
-    margin: 1.5% 1.5% 3.5% 1.5%;
+    min-height: 10px; */
+    margin: 10px 1.5% 10px 1.5%;
     float: left;
-    font-family: Indie Flower;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    align-content: stretch;
 }
 
 .goalpicture {
     background-image: url("../assets/goals/abandoned_stations.jpg");
-
-   /* background-color: #ffaaaa; */
     background-size: 100%;
     width: auto;
-    min-height: 200px;
-    padding: 10px 10px 0 10px;
-    text-align: center;
+    min-height: 50px;
+    height: auto;
+    object-fit: cover;
+    flex-grow: 4;
 }
 
-.goalpicture > h3 {
-    min-height: 200px;
-    border-top: 1px solid #eeeeee;
-    border-right: 1px solid #eeeeee;
-    border-left: 1px solid #eeeeee;
-    padding: 10px;
+.goaltriangle {
+    width: 0px;
+    height: 0px;
+    bottom: 0px;
+    border-bottom: 50px solid #ffffff;
+    border-left: 250px solid transparent;
+    margin-top: -50px;
 }
 
 .goalproperties {
     background-color: #fefefe;
     width: auto;
-    min-height: 40px;
-    border-right: 1px solid #eeeeee;
-    border-bottom: 1px solid #eeeeee;
-    border-left: 1px solid #eeeeee;
-    margin: 0 10px 10px 10px;
-    padding: 10px;
+    height: auto;
+    padding: 20px 10px 20px 10px;
+}
+
+.true > .goaltriangle {
+    border-bottom: 30px solid #333333;
+    border-left: 0px solid transparent;
+    border-right: 250px solid transparent;
+    margin-top: -30px;
+}
+
+.true > .goalproperties {
+    background-color: #333333;
+    color: #ffffff;
 }
 

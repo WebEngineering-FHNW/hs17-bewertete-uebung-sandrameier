@@ -9,9 +9,8 @@ class GoalController {
     def home(Topic meinThema) {
         List<Topic> t = Topic.list()
         List<Goal> g = Goal.list()
-        List<Goal> gbyt = Goal.findAllByGoalTopic(meinThema)
 
-        render view:'home', model: [goals: g, topics: t, goalsByTopic: gbyt]
+        render view:'home', model: [goals: g, topics: t]
     }
 
     def addGoal(Goal g) {
