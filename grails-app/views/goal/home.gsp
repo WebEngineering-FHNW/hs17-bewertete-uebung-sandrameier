@@ -16,13 +16,14 @@
 </head>
 
 <body>
-    <header>
-        <!-- TODO: name of a topic? -->
+    <%-- Header is just the title of the site --%>
+    <header id="top">
+        <!-- TODO: design -->
         <h1>Bucket List</h1>
     </header>
 
+    <%-- Navigation allows the user to navigate to the anchor point of each topic --%>
     <nav>
-        <!-- TODO: jump to topic -->
         <ul>
             <g:each var="thema" in="${topics}">
                 <a href="#${thema}"><li>${thema}</li></a>
@@ -30,30 +31,50 @@
         </ul>
     </nav>
 
+    <%-- Here starts the real content --%>
     <main>
-        <!-- TODO: is repeating over the elements nicer possible? -->
-        <%-- <g:findAll in="${books}" expr="it.author == 'Stephen King'">
-            <p>Title: ${it.title}</p>
-        </g:findAll> --%>
+        <%-- Iteration over each of the existing topics --%>
         <g:each in="${topics}" var="thema" class="topic">
+
             <div class="topic">
-            <h2 id="${thema}">${thema}</h2>
-            <g:each in="${goals}" var="ziel">
-                <g:if test="${ziel.goalTopic == thema}">
-                <article class="${ziel.goalReached}">
-                    <div class="goalpicture">
-                        <!-- <h3>${ziel}</h3> -->
-                    </div>
-                    <div class="goaltriangle"></div>
-                    <div class="goalproperties">
-                        ${ziel.goalDescription}
-                        ${ziel.goalDeadline}
-                        ${ziel.goalPriority}
-                    </div>
-                </article>
-                </g:if>
-            </g:each>
+                <%-- Titel of each topic with a corresponding id, so that you can navigate to it with top navigation --%>
+                <h2 id="${thema}">${thema}</h2>
+
+                <%-- Iteration over each of the goals that belong to this topic --%>
+                <g:each in="${goals}" var="ziel">
+                    <g:if test="${ziel.goalTopic == thema}">
+
+                        <%-- One article makes one goal element --%>
+                        <article class="${ziel.goalReached}">
+                            <%-- Goal picture --%>
+                            <div class="goalpicture">
+                            </div>
+
+                            <%-- Goal triangle (design element) with buttons --%>
+                            <div class="goaltriangle">
+                                <g:if test="${ziel.goalReached == false}">
+                                    <div class="buttonreached">R</div>
+                                </g:if>
+                                <div class="buttonedit">B</div>
+                            </div>
+
+                            <%-- Goal properties, such as priority, deadline and description --%>
+                            <div class="goalproperties">
+                                <div class="goaldata">
+                                    <p>Prio: ${ziel.goalPriority}</p>
+                                    <p><g:formatDate format="dd-MM-yyyy" date="${ziel.goalDeadline}" /></p>
+                                </div>
+                                ${ziel.goalDescription}
+                            </div>
+                        </article>
+
+                    </g:if>
+                </g:each>
+
+                <%-- Button to navigate to the top of the site at the end of each topic section --%>
+                <a href="#top"><p class="buttontop">nach oben</p></a>
             </div>
+
         </g:each>
     </main>
 
