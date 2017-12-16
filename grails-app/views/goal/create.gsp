@@ -25,6 +25,7 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
+            <%-- EXTERNAL: Code to add file is from here: https://de.slideshare.net/cavneb/upload-files-with-grails (GitHub: https://github.com/coderberry/FileUploader) --%>
             <g:form controller="goal" method="post" action="save" enctype="multipart/form-data">
                 <fieldset class="form">
                     <f:all bean="goal" except="goalImage"/>
@@ -34,6 +35,7 @@
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
                 </fieldset>
             </g:form>
+            <%-- EXTERNAL: Ends here --%>
         </div>
     </body>
 </html>
