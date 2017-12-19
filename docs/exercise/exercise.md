@@ -29,7 +29,7 @@ Go for it.
 
 ## Project delivery <to be filled by student>
 
-How to start the project: (if other than `grailsw run-app`)
+How to start the project: `grailsw run-app`, then type /goal after the existing localhost url
 
 How to test the project:  (if other than `grailsw test-app`)
 
