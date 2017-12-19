@@ -9,14 +9,21 @@ import spock.lang.Specification
 @TestFor(Topic)
 class TopicSpec extends Specification {
 
+    Topic topic
+
     def setup() {
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
+    void "Topic: toString() should give back name of topic"() {
+        when:
+            topic = new Topic(topicName: "Herausforderungen")
+        then:
+            topic.toString() == "Herausforderungen"
+        expect:"toString method does not work properly"
+            true
     }
+
 }

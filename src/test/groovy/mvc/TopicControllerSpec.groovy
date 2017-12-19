@@ -9,14 +9,14 @@ import spock.lang.Specification
 @TestFor(TopicController)
 class TopicControllerSpec extends Specification {
 
+    Topic topic
+
     def setup() {
     }
 
     def cleanup() {
     }
 
-    void "test something"() {
-        expect:"fix me"
-            true == false
-    }
+    // no tests here since the controller does everything automatically and the topic itself has been tested
+    // (Honestly: I tried to test the Topic.list() function but I couldn't make it work, it would throw errors about either Topic not being a domain class)
 }

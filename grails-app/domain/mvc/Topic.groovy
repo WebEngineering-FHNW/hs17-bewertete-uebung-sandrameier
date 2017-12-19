@@ -9,6 +9,6 @@ class Topic {
     }
 
     static constraints = {
-        topicName(blank: false)
+        topicName(blank: false, nullable: false)
     }
 }
