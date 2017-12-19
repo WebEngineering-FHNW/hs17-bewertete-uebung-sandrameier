@@ -26,10 +26,10 @@
                 </g:eachError>
             </ul>
             </g:hasErrors>
-            <g:form resource="${this.goal}" method="PUT">
+            <g:form resource="${this.goal}" method="PUT" enctype="multipart/form-data">
                 <g:hiddenField name="version" value="${this.goal?.version}" />
                 <fieldset class="form">
-                    <f:all bean="goal" except="featuredImageBytes,featuredImageContentType"/>
+                    <f:all bean="goal"/>
                 </fieldset>
                 <fieldset class="buttons">
                     <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />

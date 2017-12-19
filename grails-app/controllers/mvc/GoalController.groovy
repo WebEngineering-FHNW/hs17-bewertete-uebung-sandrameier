@@ -15,6 +15,12 @@ class GoalController {
         render view:'home', model: [goals: g, topics: t]
     }
 
+    def setReached(String s) {
+        Goal g = Goal.findById(s.toInteger())
+        g.save(goalReached: true)
+
+        redirect(action: "show", id: g.id)
+    }
 
     // EXTERNAL: This code is from here https://de.slideshare.net/cavneb/upload-files-with-grails (GitHub: https://github.com/coderberry/FileUploader)
     // EXTERNAL: Since the code did not work properly, I made a few changes (mainly not handling the first save in an "if"-Statement)

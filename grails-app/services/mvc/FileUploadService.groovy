@@ -5,15 +5,18 @@ import grails.web.context.ServletContextHolder
 import org.springframework.web.multipart.MultipartFile
 
 // EXTERNAL: This code is from here https://de.slideshare.net/cavneb/upload-files-with-grails (GitHub: https://github.com/coderberry/FileUploader)
-// EXTERNAL: No major changes from my side were being made
+// EXTERNAL: Changed directory for image saving to a subdirectory of assets/images
 
 @Transactional
 class FileUploadService {
 
     String uploadFile(MultipartFile file, String name, String destinationDirectory) {
 
+        // Some adjustments here, as this makes it easier to access the images with css
         def servletContext = ServletContextHolder.servletContext
-        def storagePath = servletContext.getRealPath(destinationDirectory)
+        def spOne = servletContext.getRealPath(destinationDirectory)
+        def spTwo = spOne.replace("\\", "/")
+        def storagePath = spTwo.replaceFirst("src/main/webapp/", "grails-app/assets/images/")
 
         def storagePathDirectory = new File(storagePath)
         if (!storagePathDirectory.exists()) {
