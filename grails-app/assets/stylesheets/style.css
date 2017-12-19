@@ -2,7 +2,7 @@
 html, body {
     width: 100%;
     height: 100%;
-    font-family: Raleway;
+    font-family: "Raleway";
     font-weight: lighter;
     font-size: 0.95em;
     color: #000000;
@@ -15,7 +15,7 @@ h1, h2, h3 {
 
 h1 {
     padding-top: 2%;
-    font-family: Nunito;
+    font-family: "Nunito";
     font-size: 5em;
     color: #ffffff;
 }
@@ -23,7 +23,7 @@ h1 {
 h2 {
     height: 25px;
     margin: 0 0 10px 1.5%;
-    font-family: Bree Serif;
+    font-family: "Bree Serif";
     font-size: 1.8em;
 }
 
@@ -45,7 +45,7 @@ nav {
     background-color: #333333;
     width: 100%;
     height: 36px;
-    font-family: Montserrat;
+    font-family: "Montserrat";
 }
 
 nav > ul {
@@ -62,7 +62,7 @@ nav > ul > a {
     height: 100%;
     float: left;
     list-style-type: none;
-    flex-basis: 160px;
+    flex-basis: 140px;
     text-align: center;
     text-decoration: none;
 /*    text-transform: uppercase; */
@@ -76,8 +76,8 @@ nav > ul > a > li {
 }
 
 nav > ul > a > li:hover {
-    border-bottom: 3px solid #0080FF;
-    color: #0080FF;
+    border-bottom: 3px solid #baace9;
+    color: #baace9;
 }
 
 
@@ -97,11 +97,11 @@ main {
 }
 
 .topic:nth-child(odd) {
-    background-color: #cdcdcd;
+    background-color: #bbbbbe;
 }
 
 .topic:nth-child(even) {
-    background-color: #dedede;
+    background-color: #cccccf;
 }
 
 .topictitle {
@@ -120,8 +120,16 @@ main {
     float: left;
 }
 
+a:hover > .topictitle {
+    color: #a20958;
+}
+
+a:hover > .buttonedittopic {
+    background-image: url("../assets/edithover.png")
+}
+
 /* Main > article styling */
-article {
+article, .topicarticle {
     background-color: #0f144b;
     width: 250px;
     height: 300px;
@@ -159,14 +167,12 @@ article {
     border-right: 15px solid transparent;
     border-bottom: 10px solid #FE2E9A;
 }
-
 .buttoneditgoal, .buttonreached {
     background-color: #FE2E9A;
     width: 30px;
     height: 15px;
     position: relative;
 }
-
 /* Code for position if the button to mark a goal as reached is displayed too
 .buttoneditgoal {
     margin: 13px 0 0 -58px;
@@ -181,7 +187,6 @@ article {
     background-position-x: 50%;
     margin: -5px 0 0 -40px;
 }
-
 .buttoneditgoal:after, .buttonreached:after {
     content: "";
     position: absolute;
@@ -192,6 +197,10 @@ article {
     border-left: 15px solid transparent;
     border-right: 15px solid transparent;
     border-top: 10px solid #FE2E9A;
+}
+
+.buttoneditgoal:hover {
+    background-image: url("../assets/edithover.png")
 }
 
 .goalproperties {
@@ -235,18 +244,32 @@ article {
     color: #999999;
 }
 
-/* Main > article > add new element styling */
+/* Main > article/topicarticle > add new element styling */
 article:last-of-type {
-    opacity: 0.5;
+    opacity: 0.3;
+    text-align: center;
+}
+.topicarticle {
+    background-color: #ffffff;
+    opacity: 0.4;
     text-align: center;
 }
 
-article > a {
+article:last-of-type:hover, .topicarticle:hover {
+    opacity: 0.8;
+}
+
+article > a, .topicarticle > a {
     width: 100%;
     height: 100%;
     padding: 90px 50px 70px 50px;
     text-decoration: none;
+}
+article > a {
     color: #ffffff;
+}
+.topicarticle > a {
+    color: #000000;
 }
 
 article > a:hover {
@@ -256,6 +279,11 @@ article > a:hover {
 
 .buttonaddgoal {
     background-image: url("../assets/addgoal.png");
+}
+.buttonaddtopic {
+    background-image: url("../assets/addtopic.png");
+}
+.buttonaddgoal, .buttonaddtopic {
     background-repeat: no-repeat;
     background-size: auto 100%;
     background-position-x: 50%;
@@ -263,11 +291,16 @@ article > a:hover {
     height: 60px;
 }
 
+
 /* Button top styling */
 .buttontop {
-    text-decoration: underline;
     position: absolute;
     right: 20%;
     bottom: 30px;
-    color: #0080FF;
+    text-decoration: underline;
+    color: #413b72;
+}
+
+.buttontop:hover {
+    color: #ffffff;
 }

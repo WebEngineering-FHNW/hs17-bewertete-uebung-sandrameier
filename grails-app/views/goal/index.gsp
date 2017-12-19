@@ -4,23 +4,16 @@
     <meta name="layout" content="main"/>
     <title>Bucket List</title>
     <asset:stylesheet src="style.css"/>
-    <!-- TODO: nicht benötigte Schriften löschen -->
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Bree+Serif"> <!-- Zwischentitel -->
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Raleway"> <!-- Fliesstext -->
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Montserrat">
     <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Nunito">
-
-
-    <!-- TODO: facivon -->
-    <asset:link rel="icon" href="favicon.ico" type="image/x-ico" />
-
-    <!-- TODO: Grails header entfernen -->
+    <asset:link rel="icon" href="favicon.png" />
 </head>
 
 <body>
     <%-- Header is just the title of the site --%>
     <header id="top">
-        <!-- TODO: design -->
         <h1>Bucket List</h1>
     </header>
 
@@ -70,7 +63,7 @@
                                 </g:if>
                                 --%>
 
-                                <a href="edit/${ziel.id}"><div class="buttoneditgoal"></div></a>
+                                <a href="../goal/edit/${ziel.id}"><div class="buttoneditgoal"></div></a>
                             </div>
 
                             <%-- Goal properties, such as priority, deadline and description --%>
@@ -87,7 +80,7 @@
                 </g:each>
 
                 <%-- Article to add a new goal --%>
-                <article><a href="create">
+                <article><a href="../goal/create">
                     <div class="buttonaddgoal"></div><br />
                     <p>neues Ziel hinzufügen</p>
                 </a></article>
@@ -99,7 +92,10 @@
 
         <%-- Topic to add a new topic --%>
         <div class="topic" id="newtopic">
-            neues Thema hinzufügen
+            <div class="topicarticle"><a href="../topic/create">
+                <div class="buttonaddtopic"></div><br />
+                <p>neues Thema hinzufügen</p>
+            </a> </div>
 
             <%-- Button to navigate to the top of the site at the end of each topic section --%>
             <a href="#top"><p class="buttontop">nach oben</p></a>
