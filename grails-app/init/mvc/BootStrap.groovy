@@ -32,8 +32,10 @@ class BootStrap {
                                    goalImage: "4",
                                    goalPriority: 3,
                                    goalTopic: reisen))
+        Date ubahndate = new Date().clearTime()
         Goal ubahn = save(new Goal(goalDescription: "Verlassene U-Bahn Stationen entdecken",
                                       goalImage: "5",
+                                      goalDeadline: ubahndate + 400,
                                       goalPriority: 3,
                                       goalTopic: defaultTopic))
 

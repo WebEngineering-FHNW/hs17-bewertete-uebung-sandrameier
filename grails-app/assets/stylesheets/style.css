@@ -148,6 +148,8 @@ article, .topicarticle {
     flex-grow: 4;
 }
 
+/* EXTERNAL: The code for the css forms (triangle, hexagon) is from here: https://css-tricks.com/examples/ShapesOfCSS/ */
+/* I implemented it with certain changes */
 .goaltriangle {
     width: 10px;
     height: 0px;
@@ -202,6 +204,7 @@ article, .topicarticle {
 .buttoneditgoal:hover {
     background-image: url("../assets/edithover.png")
 }
+/* EXTERNAL: Ends here */
 
 .goalproperties {
     background-color: #fefefe;
