@@ -6,13 +6,13 @@
         <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Nunito">
         <link rel="stylesheet"  href="https://fonts.googleapis.com/css?family=Raleway">
         <g:set var="entityName" value="${message(code: 'goal.label', default: 'Goal')}" />
-        <title><g:message code="default.edit.label" args="[entityName]" /></title>
+        <title><g:message code="default.show.label" args="[entityName]" /></title>
     </head>
     <body>
         <div class="subheader">
-            Ziel bearbeiten
+            Ziel Detailansicht
         </div>
-        <a href="#edit-goal" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
+        <a href="#show-goal" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
                 <li><g:link class="home" action="index"><g:message code="default.home.label"/></g:link></li>
@@ -21,25 +21,16 @@
                 <li><g:link class="create" action="create"><g:message code="default.new.label" args="[entityName]" /></g:link></li>
             </ul>
         </div>
-        <div id="edit-goal" class="content scaffold-edit" role="main">
-            <h1><g:message code="default.edit.label" args="[entityName]" /></h1>
+        <div id="show-goal" class="content scaffold-show" role="main">
+            <h1><g:message code="default.show.label" args="[entityName]" /></h1>
             <g:if test="${flash.message}">
             <div class="message" role="status">${flash.message}</div>
             </g:if>
-            <g:hasErrors bean="${this.goal}">
-            <ul class="errors" role="alert">
-                <g:eachError bean="${this.goal}" var="error">
-                <li <g:if test="${error in org.springframework.validation.FieldError}">data-field-id="${error.field}"</g:if>><g:message error="${error}"/></li>
-                </g:eachError>
-            </ul>
-            </g:hasErrors>
-            <g:form resource="${this.goal}" method="PUT" enctype="multipart/form-data">
-                <g:hiddenField name="version" value="${this.goal?.version}" />
-                <fieldset class="form">
-                    <f:all bean="goal"/>
-                </fieldset>
+            <f:display bean="goal" />
+            <g:form resource="${this.goal}" method="DELETE">
                 <fieldset class="buttons">
-                    <input class="save" type="submit" value="${message(code: 'default.button.update.label', default: 'Update')}" />
+                    <g:link class="edit" action="edit" resource="${this.goal}"><g:message code="default.button.edit.label" default="Edit" /></g:link>
+                    <input class="delete" type="submit" value="${message(code: 'default.button.delete.label', default: 'Delete')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: 'Are you sure?')}');" />
                 </fieldset>
             </g:form>
         </div>

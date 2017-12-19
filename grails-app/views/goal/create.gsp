@@ -15,8 +15,11 @@
         <a href="#create-goal" class="skip" tabindex="-1"><g:message code="default.link.skip.label" default="Skip to content&hellip;"/></a>
         <div class="nav" role="navigation">
             <ul>
+                <%--
                 <li><a class="home" href="${createLink(uri: '/')}"><g:message code="default.home.label"/></a></li>
                 <li><g:link class="list" action="index"><g:message code="default.list.label" args="[entityName]" /></g:link></li>
+                --%>
+                <li><g:link class="home" action="index"><g:message code="default.home.label"/></g:link></li>
             </ul>
         </div>
         <div id="create-goal" class="content scaffold-create" role="main">
@@ -36,11 +39,14 @@
                 <fieldset class="form">
                     <f:field bean="goal" property="goalDescription" />
                     <div class="fieldcontain">
-                        <label style="float: left;">Goal Image</label>
+                        <label style="float: left;">Goal Image <sup>1</sup></label>
                         <input type="file" name="file" id="file" style="float: left;" />
+                        <label><sub>1) Achtung: Nur .jpg Dateien sind für den Upload erlaubt</sub></label>
                         <div style="clear: both;"><%-- I BREAK THE FLOAT --%></div>
                     </div>
                     <f:all bean="goal" except="goalDescription, goalImage" />
+                    <br />
+
                 </fieldset>
                 <fieldset class="buttons">
                     <g:submitButton name="create" class="save" value="${message(code: 'default.button.create.label', default: 'Create')}" />
