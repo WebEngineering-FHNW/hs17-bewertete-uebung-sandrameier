@@ -46,4 +46,19 @@ I'm particular proud of:    I quite like the design for the goal index site, it 
 
 ## Project grading 
 
-< to be filled by lecturer>
+A project description as static html is missing. The idea is clear from the content above
+but the format is not followed (maybe you forgot to add/push?).
+The application works fine. 
+NB: it appears that after image upload, the image is not shown as part of goals' "tile".
+
+I award an extra point for the technical challenge with file upload and the extra work
+that it takes to search the web for a solution.
+Two more points for the artistic value: 
+- the user interaction design is clear and engaging
+- the visualization and styling is very nice.
+
+Congratulations!
+You created a very nice, distributed, interactive, DB-backed web application all by
+yourself from scratch.
+
+Total grade: 5.9
