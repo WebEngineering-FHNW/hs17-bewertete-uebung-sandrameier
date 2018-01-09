@@ -61,4 +61,6 @@ Congratulations!
 You created a very nice, distributed, interactive, DB-backed web application all by
 yourself from scratch.
 
-Total grade: 5.9
+Total grade: 6.0 (was 5.9)
+
+Correction: description was given as grails-app/views/index.html. Fully valid, nice semantic tags.
